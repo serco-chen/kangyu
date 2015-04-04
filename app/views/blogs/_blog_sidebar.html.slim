@@ -1,0 +1,23 @@
+.input-group
+  input#search.form-control placeholder="搜索" type="text" /
+  span.input-group-btn
+    button.btn.btn-default type="button"
+      i.fa.fa-search
+.sidebar-item
+  .header
+    h4 最受欢迎的新闻
+  - @popular_blogs.each do |blog|
+    .row.blog-post
+      .col-sm-12
+        = link_to blog.title, blog_path(blog)
+/ .sidebar-item
+/   .header
+/     h4 Blog Tags
+/   a href="blog-post.html#"
+/     span.label.label-tag
+/       i.icon-tag
+/       | Business
+/   a href="blog-post.html#"
+/     span.label.label-tag
+/       i.icon-tag
+/       | Music

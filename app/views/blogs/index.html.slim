@@ -1,0 +1,43 @@
+.page-header
+  .container
+    h3
+      | Blog
+.container
+  .row.blog
+    .col-sm-9.blog-content
+      - @blogs.each do |blog|
+        .blog-post-item
+          .row
+            .col-sm-12
+              h4
+                = link_to blog.title, blog_path(blog)
+              .blog-post-metadata
+                span.blog-post-date
+                  i.fa.fa-calendar
+                  =  blog.updated_at
+              / .blog-post-tags
+              /   a href="blog.html#"
+              /     span.label.label-tag
+              /       i.icon-tag
+              /       | Python
+              /   a href="blog.html#"
+              /     span.label.label-tag
+              /       i.icon-tag
+              /       | Flask
+              .blog-post-content-summary
+                = blog.body[0..99]
+
+                = link_to blog_path(blog) do
+                  span.label.label-tag ... more
+          hr.visible-xs
+
+      .blog-paging
+        a.btn.btn-default href="blog.html#"
+          i.icon-double-angle-left
+          | Newer
+        a.btn.btn-default href="blog.html#"
+          | Older
+          i.icon-double-angle-right
+      hr.visible-xs/
+    .col-sm-3.blog-sidebar
+      = render 'blog_sidebar'

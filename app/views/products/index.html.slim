@@ -1,0 +1,29 @@
+.page-header
+  .container
+    h3
+      | 最新产品
+#portfolio
+  #filters_container
+    .container
+      .row
+        .col-sm-4
+          ul#filters
+            li
+              = link_to "All", root_path, class: "active", data: {filter: "*"}
+            li.separator = "/"
+            li
+              = link_to "Products", products_path, data: {filter: ".design"}
+
+        .col-sm-8.hidden-xs
+  .container
+    #gallery_container
+      - @products.each do |product|
+        .photo.app
+          = image_tag product.images.first.file.url, class: "img-responsive"
+          h4 = product.title
+          p.js-readmore = product.description.presence || "没有描述"
+          = link_to product_path(product), class: "mask" do
+            h4 = product.title
+            / small Application
+            .more
+              i.fa.fa-plus-circle.fa-2x

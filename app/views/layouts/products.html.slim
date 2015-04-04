@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    meta charset="utf-8" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    meta content="浙江电动牙刷厂家|宁波电动牙刷供应商|牙刷批发价格-宁波市北仑康煜电器科技有限公司" name="description" /
+    meta content="康煜电器科技" name="author" /
+    title 宁波市北仑康煜电器科技有限公司
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    /![if lt IE 9]
+      = javascript_include_tag 'html5shiv', 'data-turbolinks-track' => true
+      = javascript_include_tag 'respond', 'data-turbolinks-track' => true
+  body
+
+    .navbar.navbar-default.navbar-fixed-top.visible-xs
+      .container
+        .navbar-header
+          button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand href="index.html"
+            | 康煜
+            span.strap 电器
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              = link_to "首页", root_path
+            li
+              = link_to "新闻", blogs_path
+            li
+              a href="about.html" 关于
+    ul#sidemenu.sidemenu.hidden-xs
+      li
+        = link_to "康煜电器", root_path, class: 'sidemenu-brand'
+      li
+        = link_to root_path do
+          i.fa.fa-home.fa-2x
+          br
+          = "首页"
+      li
+        = link_to blogs_path do
+          i.fa.fa-newspaper-o.fa-2x
+          br
+          = "新闻"
+      li
+        a href="about.html"
+          i.fa.fa-info.fa-2x
+          br
+          = "关于"
+    .content-area
+
+      == yield
+
+      footer
+        .container
+          .row
+            .col-sm-6.footer-posts
+              h5 最近新闻
+              .row.blog-post
+                .col-sm-12
+                  a href="#" 让小朋友养成刷牙好习惯的诀窍
+              p
+              .row
+                .col-sm-12
+                  a href="#" 老年人最适合使用儿童牙刷
+            hr.visible-xs/
+            .col-sm-6.footer-contact
+              h5 联系方式
+              address style="margin-bottom:15px;"
+                | 宁波市北仑康煜电器科技有限公司
+                br
+                | 宁波市北仑区大矸镇俞王村172号
+
+              | 联系人：裘总
+              br
+              | 电话：0574-86138686
+              br
+              | 传真：0574-86138686
+              br
+              | 手机：13906690282
+
+      #footer-bottom
+        | &copy; 2015 宁波市北仑康煜电器科技有限公司. All rights reserved.
+

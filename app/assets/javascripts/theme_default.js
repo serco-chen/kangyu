@@ -1,6 +1,12 @@
-$(document).ready(function () {
+$(document).on('ready page:load', function () {
   resizeSideMenuHeight();
 
+  $(".js-readmore").dotdotdot({
+    /*  The text to add as ellipsis. */
+    ellipsis  : '... ',
+    /*  Optionally set a max-height, if null, the height will be measured. */
+    height    :40
+  });
 
   if(window.chrome) {
     $('.banner li').css('background-size', '100% 100%');
@@ -39,7 +45,7 @@ $(document).ready(function () {
       $container.isotope({
         itemSelector : '.photo',
         masonry: {
-          columnWidth: 280
+          columnWidth: 360
         }
       });
     });

@@ -1731,8 +1731,9 @@ footer hr{
 }
 #portfolio #filters {
   list-style-type: none;
-  text-align:right;
+  text-align:left;
   font-size:14px;
+  padding-left: 0;
 }
 
 #portfolio #filters li {
@@ -1762,7 +1763,7 @@ footer hr{
 }
 
 #portfolio #gallery_container .photo {
-  width: 270px;
+  width: 350px;
   margin: 5px;
   display:inline-block;
   position: relative;

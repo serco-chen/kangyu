@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require isotope.pkgd
-//= require_tree .
+//= require isotope
+//= require jquery.bxslider.min
+//= require jquery.dotdotdot
+//= require theme_default
