@@ -1,11 +1,12 @@
 ActiveAdmin.register Product do
-  permit_params :title, :description, images_attributes: [:id, :file, :file_file_name, :_destroy]
+  permit_params :title, :description, :product_type, images_attributes: [:id, :file, :file_file_name, :_destroy]
 
   index do
     selectable_column
     id_column
     column :title
     column :description
+    column :product_type
     column "Image Count" do |product|
       product.images.size
     end
@@ -21,6 +22,7 @@ ActiveAdmin.register Product do
     f.inputs "Product" do
       f.input :title
       f.input :description
+      f.input :product_type, as: :select, collection: Product.product_types.keys
       f.inputs do
         f.has_many :images, allow_destroy: true, new_record: '上传文件' do |t|
           t.input :file, as: :file

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
   resources :blogs, only: [:index, :show]
+
+  get 'intro', to: 'pages#intro'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

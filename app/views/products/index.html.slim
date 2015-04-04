@@ -1,7 +1,7 @@
 .page-header
   .container
     h3
-      | 最新产品
+      | 产品展示
 #portfolio
   #filters_container
     .container
@@ -9,16 +9,19 @@
         .col-sm-4
           ul#filters
             li
-              = link_to "All", root_path, class: "active", data: {filter: "*"}
+              = link_to "全部", root_path, class: "active", data: {filter: "*"}
             li.separator = "/"
             li
-              = link_to "Products", products_path, data: {filter: ".design"}
+              = link_to "干电池牙刷", products_path, data: {filter: ".battery"}
+            li.separator = "|"
+            li
+              = link_to "充电型牙刷", products_path, data: {filter: ".charge"}
 
         .col-sm-8.hidden-xs
   .container
     #gallery_container
       - @products.each do |product|
-        .photo.app
+        .photo.app class=(product.charge? ? 'charge' : 'battery')
           = image_tag product.images.first.file.url, class: "img-responsive"
           h4 = product.title
           p.js-readmore = product.description.presence || "没有描述"

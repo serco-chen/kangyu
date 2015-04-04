@@ -2,10 +2,10 @@
   .container
     h3
       = @product.title
-      small.pull-right.hidden-xs
-        = link_to "返回首页", root_url
 .project-detail.container
   .row
+    .col-xs-12.col-sm-6.col-md-6
+      = image_tag @product.images.first.file.url
     .project-info.col-xs-12.col-sm-6.col-md-6
       .header
         h4 = @product.title

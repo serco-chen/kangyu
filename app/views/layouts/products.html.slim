@@ -32,7 +32,7 @@ html
             li
               = link_to "新闻", blogs_path
             li
-              a href="about.html" 关于
+              = link_to "公司简介", intro_path
     ul#sidemenu.sidemenu.hidden-xs
       li
         = link_to "康煜电器", root_path, class: 'sidemenu-brand'
@@ -47,10 +47,10 @@ html
           br
           = "新闻"
       li
-        a href="about.html"
-          i.fa.fa-info.fa-2x
+        = link_to intro_path do
+          i.fa.fa-bank.fa-2x
           br
-          = "关于"
+          = "公司简介"
     .content-area
 
       == yield
@@ -60,13 +60,10 @@ html
           .row
             .col-sm-6.footer-posts
               h5 最近新闻
-              .row.blog-post
-                .col-sm-12
-                  a href="#" 让小朋友养成刷牙好习惯的诀窍
-              p
-              .row
-                .col-sm-12
-                  a href="#" 老年人最适合使用儿童牙刷
+              - @popular_blogs.each do |blog|
+                .row.blog-post
+                  .col-sm-12
+                    = link_to blog.title, blog_path(blog)
             hr.visible-xs/
             .col-sm-6.footer-contact
               h5 联系方式
@@ -84,5 +81,5 @@ html
               | 手机：13906690282
 
       #footer-bottom
-        | &copy; 2015 宁波市北仑康煜电器科技有限公司. All rights reserved.
+        | &copy; 2015 宁波市北仑康煜电器科技有限公司. 版权所有.
 
