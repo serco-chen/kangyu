@@ -1,8 +1,10 @@
-.input-group
-  input#search.form-control placeholder="搜索" type="text" /
-  span.input-group-btn
-    button.btn.btn-default type="button"
-      i.fa.fa-search
+= form_tag('/blogs/search', method: :get)
+  .input-group
+    - search = params[:q].presence
+    input#search.form-control name="q" placeholder="搜索" type="text" value=search
+    span.input-group-btn
+      button.btn.btn-default type="submit"
+        i.fa.fa-search
 .sidebar-item
   .header
     h4 最受欢迎的新闻

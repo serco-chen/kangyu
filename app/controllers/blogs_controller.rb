@@ -10,4 +10,9 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
   end
 
+  def search
+    query = '%' + params[:q] + '%'
+    @blogs = Blog.where('body LIKE ? OR title LIKE ?', query, query).page params[:page]
+  end
+
 end

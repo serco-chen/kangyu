@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   root 'products#index'
 
   resources :products, only: [:index, :show]
-  resources :blogs, only: [:index, :show]
+  resources :blogs, only: [:index, :show] do
+    collection do
+      get 'search'
+    end
+  end
 
   get 'intro', to: 'pages#intro'
   # Example of regular route:
