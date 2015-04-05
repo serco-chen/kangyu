@@ -1,5 +1,4 @@
-source 'https://rubygems.org'
-
+source 'https://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -32,6 +31,9 @@ gem 'annotate', '~> 2.6.6'
 gem "paperclip", "~> 4.2"
 gem 'kaminari'
 
+# Use Puma as the app server
+gem 'puma'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -50,5 +52,12 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # for deployment
+  gem 'capistrano', '~> 3.3.0'
+  gem 'capistrano3-puma'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
 end
 
