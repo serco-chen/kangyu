@@ -1,13 +1,13 @@
 .page-header
   .container
     h3
-      = @blog.title
+      = link_to "所有新闻", blogs_path
 .container
   .row.blog
     .col-sm-9.blog-content
       .blog-post
         h4
-          = link_to "所有新闻", blogs_path
+          = @blog.title
         .blog-post-metadata
           span.blog-post-date
             i.fa.fa-calendar
