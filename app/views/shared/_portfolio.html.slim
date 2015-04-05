@@ -1,0 +1,25 @@
+/! portfolio begins
+section#page-portfolio.page-portfolio
+  .container
+    .row
+      header.section-header
+        h2.section-title
+          span 最新产品 | Latest Products
+        .spacer
+        p.section-subtitle
+      #grid-controls-wrapper
+        ul.nav.nav-pills.center-pills.grid-controls
+          li.active.filter
+            a data-filter="*" href="javascript:void(0)"  全部 ALL
+          li.filter
+            a data-filter=".charge" href="javascript:void(0)" 充电型 CHARGE
+          li.filter
+            a data-filter=".battery" href="javascript:void(0)"  干电池型 BATTERY
+      div
+        ul.grid.grid-wrapper
+          - @products.each do |product|
+            li.mix class=(product.charge? ? "charge" : "battery")
+              = link_to product_url(product) do
+                img alt="" src=product.images.first.file.url
+
+/! portfolio ends

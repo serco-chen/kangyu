@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def setup_news
-    @popular_blogs = Blog.order("updated_at desc").limit(2)
+  def setup_products
+    @products = Product.all
+  end
+
+  def setup_slide_news
+    @slide_blogs = Blog.order('updated_at desc').limit(3)
   end
 end
