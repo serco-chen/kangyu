@@ -1,0 +1,53 @@
+/! contact begins
+section#page-contact.page-contact
+  .container
+    header.section-header
+      h2.section-title
+        span 联系我们 | Contact Us
+      .spacer
+      p.section-subtitle
+    .row
+      .col-sm-5.contact-info
+        h3 联系信息
+        p
+          i.fa.fa-map-marker
+          |  宁波市北仑区大矸镇俞王村172号
+        p
+          i.fa.fa-phone
+          |  13906690282 | 0574-86138686
+        p
+          i.fa.fa-fax
+          |  0574-86139706 (FAX)
+        p
+          i.fa.fa-envelope-o
+          |  9448228@qq.com
+      .col-sm-7
+        h3 给我们写信
+        /! Configure the contact form by adding your email address on mail/contact_me.php line 17
+        form#contactForm.form-horizontal novalidate=""
+          .control-group
+            label.control-label for="name"  姓名
+            .controls
+              input#name.form-control.input-lg data-validation-required-message=("请输入您的姓名.") name="name" placeholder=("您的姓名") required="" type="text" /
+              p.help-block.text-danger
+          .control-group
+            label.control-label for="email"  Email 地址
+            .controls
+              input#email.form-control.input-lg data-validation-required-message=("请输入您的 Email 地址.") name="email" placeholder=("您的 Email 地址") required="" type="email" /
+              p.help-block.text-danger
+          .control-group
+            label.control-label for="phone_number"  电话号码
+            .controls
+              input#email.form-control.input-lg data-validation-required-message=("请输入您的电话号码.") name="phone_number" placeholder=("您的电话号码") required="" type="phone_number" /
+              p.help-block.text-danger
+          .control-group
+            label.control-label for="content"  内容
+            .controls
+              textarea#message.form-control.input-lg data-validation-required-message=("请输入内容.") name="message" required="" rows="8"
+              p.help-block.text-danger
+          .form-actions
+            #success
+            button.btn.btn-default.btn-lg.btn-block type="submit" 提交
+        /! End contact-form
+    /! End row
+/! contact ends

@@ -12,9 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
-//= require isotope
-//= require jquery.bxslider.min
-//= require jquery.dotdotdot
-//= require theme_default
+
+//= require jquery.scrollTo
+//= require jquery.nav
+//= require jquery.sticky
+//= require jquery.easypiechart.min
+//= require jquery.vegas.min
+//= require jquery.isotope.min
+//= require jquery.magnific-popup.min
+//= require waypoints.min
+//= require jqBootstrapValidation
+//= require contact_me
+//= require main
+//= require modernizr-2.6.2.min

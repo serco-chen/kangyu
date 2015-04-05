@@ -1,8 +1,6 @@
 class PagesController < ApplicationController
 
-  layout "products"
-  before_action :setup_news
-
-  def intro
-  end
+  layout "home"
+  before_action :setup_products, only: [:home]
+  before_action :setup_slide_news, only: [:home]
 end

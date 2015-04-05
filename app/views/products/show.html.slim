@@ -1,24 +1,11 @@
-.page-header
-  .container
-    h3
-      = @product.title
-.project-detail.container
-  .row
-    .col-xs-12.col-sm-6.col-md-6
-      = image_tag @product.images.first.file.url
-    .project-info.col-xs-12.col-sm-6.col-md-6
-      .header
-        h4 = @product.title
-      p = @product.description.presence || "没有描述"
-      / a.btn.btn-main href="portfolio-item.html#"
-      /   i.icon-external-link
-      /   | \&nbsp;Visit Website
-hr
-.container
-  .sectionTitle.center-align ... 看看我们的其他产品
-  .work-slider
-    - @other_products.each do |product|
-      .slide
-        = link_to product_path(product) do
-          = image_tag product.images.first.file.url, class: "img-responsive"
-          h4 = product.title
+- content_for :navbar_items do
+  li
+    a href="#page-product-details"  产品介绍 | Product Introduction
+  li
+    a href="#page-portfolio"  最新产品 | Latest Products
+  li
+    a href="#page-contact"  联系我们 | Contact Us
+
+= render 'product_details'
+= render 'shared/portfolio'
+= render 'shared/contact'

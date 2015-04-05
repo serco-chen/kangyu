@@ -1,0 +1,62 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home-logo {
+  margin-top: 12px;
+  a {
+    color: #000;
+    &:hover {
+      color: #3498db;
+    }
+  }
+}
+.page-news .blogs{
+  p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  header > a {
+    float: right;
+    text-decoration: none;
+  }
+}
+// pages controller
+body.pages-home {
+  .page-portfolio {
+    background: #f7f7f7;
+  }
+  .page-news {
+    background: #fff;
+  }
+}
+
+body.blogs-index {
+  .page-portfolio {
+    background: #f7f7f7;
+  }
+  .page-blog-list {
+    min-height: 100%;
+    padding-top: 30px;
+    background: #fff;
+  }
+}
+
+body.blogs-show {
+  .page-blog-details {
+    min-height: 100%;
+    padding-top: 30px;
+    background: #fff;
+  }
+}
+
+body.products-show {
+  .page-product-details {
+    min-height: 100%;
+    padding-top: 30px;
+    background: #fff;
+  }
+  .page-portfolio {
+    background: #f7f7f7;
+  }
+}

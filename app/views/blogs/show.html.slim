@@ -1,29 +1,12 @@
-.page-header
-  .container
-    h3
-      = link_to "所有新闻", blogs_path
-.container
-  .row.blog
-    .col-sm-9.blog-content
-      .blog-post
-        h4
-          = @blog.title
-        .blog-post-metadata
-          span.blog-post-date
-            i.fa.fa-calendar
-            =  @blog.updated_at
-        / .blog-post-tags
-        /   a href="blog-post.html#"
-        /     span.label.label-tag
-        /       i.icon-tag
-        /       | Python
-        /   a href="blog-post.html#"
-        /     span.label.label-tag
-        /       i.icon-tag
-        /       | Flask
-        .blog-post-content
-          = @blog.body
+- content_for :navbar_items do
+  li
+    a href="#page-blog-details"  详细新闻 | News
+  li
+    a href="#page-news"  更多新闻 | Other News
+  li
+    a href="#page-contact"  联系我们 | Contact Us
 
-    hr.visible-xs/
-    .col-sm-3.blog-sidebar
-      = render 'blog_sidebar'
+= render 'blog_details'
+= render 'shared/news'
+= render 'shared/portfolio'
+= render 'shared/contact'

@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
-  layout "products"
-  before_action :setup_news
+
+  layout "home"
+  before_action :setup_products, only: [:index, :show]
+  before_action :setup_slide_news, only: [:show]
 
   def index
     @blogs = Blog.order("updated_at desc").page params[:page]
@@ -14,5 +16,4 @@ class BlogsController < ApplicationController
     query = '%' + params[:q] + '%'
     @blogs = Blog.where('body LIKE ? OR title LIKE ?', query, query).page params[:page]
   end
-
 end

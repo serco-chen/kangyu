@@ -1,0 +1,24 @@
+/! news begins
+section#page-news.page-news
+  .container
+    header.section-header
+      h2.section-title
+        span 新闻 | News
+      .spacer
+      p.section-subtitle
+    .row
+      - @slide_blogs.each do |blog|
+        .col-md-4
+          article.blogs
+            header
+              h3 = link_to blog.title, blog_path(blog)
+              p
+                i.fa.fa-calendar
+                = format_time_for_blogs(blog.updated_at)
+              p = content_summary(blog.body)
+              = link_to blog_path(blog) do
+                span ... more
+    .row
+      .switch-articles.pull-right
+        = link_to "更多文章 ...", blogs_path
+/! news ends

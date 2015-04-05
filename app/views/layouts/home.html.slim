@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    title 宁波市北仑康煜电器科技有限公司
+    meta content="浙江电动牙刷厂家|宁波电动牙刷供应商|牙刷批发价格-宁波市北仑康煜电器科技有限公司" name="description"
+    meta content="康煜电器科技" name="author"
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+    /![if lt IE 9]
+      = javascript_include_tag 'html5shiv'
+      = javascript_include_tag 'respond'
+  body class="#{controller_name}-#{action_name}"
+    .navbar.navbar-default.navbar-static-top role="navigation"
+      .container
+        .home-logo.pull-left
+          = link_to root_path do
+            i.fa.fa-home.fa-2x
+        .navbar-header
+          button.navbar-toggle.collapsed data-target=".navbar-collapse" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .navbar-collapse.collapse
+          ul#main-menu.nav.navbar-nav
+            = content_for :navbar_items
+    == yield
