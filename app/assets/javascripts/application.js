@@ -14,9 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 
-//= require jquery.scrollTo
-//= require jquery.nav
-//= require jquery.sticky
+//= require jquery.fullPage
 //= require jquery.vegas.min
 //= require jquery.isotope.min
 //= require main

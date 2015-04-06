@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#main-menu li{
+  a {
+    &.active, &:hover {
+      color: #3498db;
+    }
+  }
+}
 .home-logo {
   margin-top: 12px;
   a {
@@ -11,8 +18,10 @@
     }
   }
 }
-.page-portfolio .grid-outsider {
-  margin: 0 auto;
+.page-portfolio {
+  .grid-outsider {
+    margin: 0 auto;
+  }
 }
 .page-news .blogs{
   p {
@@ -22,6 +31,14 @@
   header > a {
     float: right;
     text-decoration: none;
+  }
+}
+.page-contact {
+  .section-subtitle {
+    padding: 10px 0;
+  }
+  .form-actions input {
+    margin-top: 20px;
   }
 }
 // pages controller

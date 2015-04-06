@@ -1,5 +1,5 @@
 /! news begins
-section#page-news.page-news
+section.section#page-news.page-news data-anchor='fullpage-news'
   .container
     header.section-header
       h2.section-title
@@ -8,7 +8,7 @@ section#page-news.page-news
       p.section-subtitle
     .row
       - @slide_blogs.each do |blog|
-        .col-md-4
+        .col-md-4.clearfix
           article.blogs
             header
               h3 = link_to blog.title, blog_path(blog)

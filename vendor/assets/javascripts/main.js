@@ -39,56 +39,63 @@ $(document).ready(function() {
 
     /* portfolio mixitup */
 
-    $(window).load(function() {
-        var $container = $('.grid-wrapper');
-        // $container.isotope({
-        //     filter: '*',
-        //     animationOptions: {
-        //         duration: 750,
-        //         easing: 'linear',
-        //         queue: false
-        //     }
-        // });
+    // $(window).load(function() {
+    //     var $container = $('.grid-wrapper');
+    //     // $container.isotope({
+    //     //     filter: '*',
+    //     //     animationOptions: {
+    //     //         duration: 750,
+    //     //         easing: 'linear',
+    //     //         queue: false
+    //     //     }
+    //     // });
 
-        $container.isotope({
-            filter: '*',
-            itemSelector: '.mix',
-            masonry: {
-                isFitWidth: true,
-            },
-        });
+    //     $container.isotope({
+    //         filter: '*',
+    //         itemSelector: '.mix',
+    //         masonry: {
+    //             isFitWidth: true,
+    //         },
+    //     });
 
-        $('.grid-controls li a').click(function() {
-            $('.grid-controls .current').removeClass('current');
-            $(this).addClass('current');
+    //     $('.grid-controls li a').click(function() {
+    //         $('.grid-controls .current').removeClass('current');
+    //         $(this).addClass('current');
 
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
+    //         var selector = $(this).attr('data-filter');
+    //         $container.isotope({
+    //             filter: selector,
+    //             animationOptions: {
+    //                 duration: 750,
+    //                 easing: 'linear',
+    //                 queue: false
+    //             }
+    //         });
+    //         return false;
+    //     });
+    // });
+
+    /* fullPage.js */
+    var fullpage_anchors = [];
+    $('#main-menu').find('li a').map(function(){
+        fullpage_anchors.push($(this).attr('data-menuanchor'));
     });
+    console.log(fullpage_anchors)
+    $('.fullpage').fullpage({
+        //Navigation
+        menu: '#main-menu',
+        anchors: fullpage_anchors,
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: fullpage_anchors,
+        showActiveTooltips: true,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
 
-    /* Sticky menu */
-    $(".navbar").sticky({
-        topSpacing: 0
-    });
-
-
-    /* Scroll spy and scroll filter */
-    $('#main-menu').onePageNav({
-        currentClass: "active",
-        changeHash: false,
-        scrollThreshold: 0.5,
-        scrollSpeed: 750,
-        filter: "",
-        easing: "swing"
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
     });
 
     /* VEGAS Home Slider */
