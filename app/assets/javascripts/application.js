@@ -17,10 +17,7 @@
 //= require jquery.scrollTo
 //= require jquery.nav
 //= require jquery.sticky
-//= require jquery.easypiechart.min
 //= require jquery.vegas.min
 //= require jquery.isotope.min
-//= require jquery.magnific-popup.min
-//= require waypoints.min
 //= require main
 //= require modernizr-2.6.2.min

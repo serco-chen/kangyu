@@ -10,8 +10,6 @@ html
       = content_for(:head_title)
     - else
       title 浙江电动牙刷厂家|宁波电动牙刷供应商|牙刷批发价格-宁波市北仑康煜电器科技有限公司
-    = stylesheet_link_tag 'application', media: 'all'
-    = javascript_include_tag 'application'
     = csrf_meta_tags
     /![if lt IE 9]
       = javascript_include_tag 'html5shiv'
@@ -32,3 +30,5 @@ html
           ul#main-menu.nav.navbar-nav
             = content_for :navbar_items
     == yield
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
