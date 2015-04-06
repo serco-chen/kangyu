@@ -41,13 +41,21 @@ $(document).ready(function() {
 
     $(window).load(function() {
         var $container = $('.grid-wrapper');
+        // $container.isotope({
+        //     filter: '*',
+        //     animationOptions: {
+        //         duration: 750,
+        //         easing: 'linear',
+        //         queue: false
+        //     }
+        // });
+
         $container.isotope({
             filter: '*',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
+            itemSelector: '.mix',
+            masonry: {
+                isFitWidth: true,
+            },
         });
 
         $('.grid-controls li a').click(function() {

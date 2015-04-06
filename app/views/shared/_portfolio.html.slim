@@ -15,11 +15,11 @@ section#page-portfolio.page-portfolio
             a data-filter=".charge" href="javascript:void(0)" 充电型 CHARGE
           li.filter
             a data-filter=".battery" href="javascript:void(0)"  干电池型 BATTERY
-      div
+      div.grid-outsider
         ul.grid.grid-wrapper
           - @products.each do |product|
             li.mix class=(product.charge? ? "charge" : "battery")
               = link_to product_url(product) do
                 = image_tag product.images.first.file.url(:thumb)
-
+                h5.product-title = product.title
 /! portfolio ends

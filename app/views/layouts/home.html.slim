@@ -4,9 +4,12 @@ html
     meta charset="utf-8"
     meta content="IE=edge" http-equiv="X-UA-Compatible"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
-    title 宁波市北仑康煜电器科技有限公司
-    meta content="浙江电动牙刷厂家|宁波电动牙刷供应商|牙刷批发价格-宁波市北仑康煜电器科技有限公司" name="description"
     meta content="康煜电器科技" name="author"
+    meta content="宁波市北仑康煜电器科技有限公司是浙江一家专注于电动牙刷生产、批发的公司。我们的电动牙刷价格公道，质量过硬，在市场上享有良好的口碑。联系电话：0574-86138686" name="description"
+    - if content_for?(:head_title)
+      = content_for(:head_title)
+    - else
+      title 浙江电动牙刷厂家|宁波电动牙刷供应商|牙刷批发价格-宁波市北仑康煜电器科技有限公司
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
