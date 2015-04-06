@@ -22,7 +22,5 @@
 //= require jquery.isotope.min
 //= require jquery.magnific-popup.min
 //= require waypoints.min
-//= require jqBootstrapValidation
-//= require contact_me
 //= require main
 //= require modernizr-2.6.2.min

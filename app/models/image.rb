@@ -14,7 +14,7 @@
 #
 
 class Image < ActiveRecord::Base
-  has_attached_file :file
+  has_attached_file :file, :styles => { :large => "500x500", :thumb => "240x180!" }
   validates_attachment :file, :presence => true,
     :content_type => { :content_type => /\Aimage\/.*\Z/ },
     :size => { :in => 0..20.megabytes }

@@ -7,7 +7,7 @@
 #  description  :text
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  product_type :integer
+#  product_type :integer          default(0), not null
 #
 
 class Product < ActiveRecord::Base

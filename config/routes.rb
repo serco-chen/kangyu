@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:show]
   resources :blogs, only: [:index, :show]
+  resources :messages, only: [:create]
 
   get 'home', to: 'pages#home'
   # Example of regular route:

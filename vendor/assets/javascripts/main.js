@@ -1,5 +1,26 @@
 $(document).ready(function() {
 
+    $('#new_message').on('submit', function(e){
+        var self = this;
+        e.preventDefault();
+        payload=({
+            url: "/messages",
+            data: $(self).serialize(),
+            dataType: "json",
+            method: "POST"
+        })
+
+        $.ajax(payload).success(function(data){
+            alert(data.message);
+            $(self).find('input, textarea').val('');
+        })
+        .fail(function(data){
+            if (data.responseText){
+                text = JSON.parse(data.responseText);
+                alert("错误: " + text.message);
+            };
+        })
+    })
 
     /* Scroll hire me button to contact page */
     $('.hire-me').click(function() {

@@ -28,6 +28,7 @@ gem 'font-awesome-sass', '~> 4.3.0'
 gem 'annotate', '~> 2.6.6'
 gem "paperclip", "~> 4.2"
 gem 'kaminari'
+gem 'settingslogic'
 
 # Use Puma as the app server
 gem 'puma'

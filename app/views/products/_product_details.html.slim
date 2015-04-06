@@ -8,7 +8,7 @@ section#page-product-details.page-product-details
     .row
       .col-md-6
         .profile
-          img alt="" src=@product.images.first.file.url
+          = image_tag @product.images.first.file.url(:large)
       .col-md-6
         = @product.description.presence || "没有描述"
 /! product-dtails ends
