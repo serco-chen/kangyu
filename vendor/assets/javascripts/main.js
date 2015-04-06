@@ -12,7 +12,7 @@ $(document).ready(function() {
 
         $.ajax(payload).success(function(data){
             alert(data.message);
-            $(self).find('input, textarea').val('');
+            $(self).find("input[type='text'], textarea").val('');
         })
         .fail(function(data){
             if (data.responseText){

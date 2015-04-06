@@ -3,6 +3,6 @@ class MessageNotifier < ApplicationMailer
 
   def new_message(message)
     @message = message
-    mail(to: "serco@126.com")
+    mail(to: "9448228@qq.com")
   end
 end
