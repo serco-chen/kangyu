@@ -75,18 +75,6 @@ $(document).ready(function() {
         });
     });
 
-
-    /* Magnific Popup */
-    // $('.grid-wrapper').magnificPopup({
-    //     delegate: 'a',
-    //     type: 'image',
-    //     gallery: {
-    //         enabled: true
-    //     }
-    // });
-
-
-
     /* Sticky menu */
     $(".navbar").sticky({
         topSpacing: 0
