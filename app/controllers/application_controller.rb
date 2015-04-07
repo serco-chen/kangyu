@@ -3,7 +3,17 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :setup_variants
+
   private
+
+  def setup_variants
+    if browser.tablet?
+      request.variant = :tablet
+    elsif browser.mobile?
+      request.variant = :phone
+    end
+  end
 
   def setup_latest_products
     @latest_products = Product.order("updated_at desc").limit(9)

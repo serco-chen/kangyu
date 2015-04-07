@@ -1,0 +1,21 @@
+/! portfolio begins
+section.section#page-portfolio.page-portfolio data-anchor='fullpage-portfolio'
+  .container
+    .row
+      header.section-header
+        h2.section-title
+          span 最新产品 | Latest Products
+        .spacer
+        p.section-subtitle
+
+      .col-xs-12.clearfix
+        - product = @first_product
+        .mix class=product.product_type
+          = link_to product_url(product) do
+            = image_tag product.images.first.file.url(:thumb)
+            h5.product-title = product.title
+    .goto-list
+      = link_to "更多产品 ...", products_path
+
+/! portfolio ends
+

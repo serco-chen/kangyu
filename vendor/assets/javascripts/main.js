@@ -24,14 +24,6 @@ $(document).ready(function() {
         })
     })
 
-    /* Scroll hire me button to contact page */
-    $('.hire-me').click(function() {
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 500);
-        return false;
-    });
-
     /* For Bootstrap current state on portfolio sorting */
 
     $('ul.nav-pills li a').click(function(e) {

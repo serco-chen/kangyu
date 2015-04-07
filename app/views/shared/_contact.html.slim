@@ -7,7 +7,7 @@ section.section#page-contact.page-contact data-anchor='fullpage-contact'
       .spacer
       p.section-subtitle
     .row
-      .col-sm-5.contact-info
+      .col-md-5.col-xs-12.contact-info
         h3 联系信息
         p
           i.fa.fa-map-marker
@@ -21,7 +21,7 @@ section.section#page-contact.page-contact data-anchor='fullpage-contact'
         p
           i.fa.fa-envelope-o
           |  9448228@qq.com
-      .col-sm-7
+      .col-md-7.hidden-xs
         h3 给我们写信
         /! Configure the contact form by adding your email address on mail/contact_me.php line 17
         = form_for Message.new, class: "form-horizontal" do |f|
