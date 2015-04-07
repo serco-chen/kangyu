@@ -16,10 +16,14 @@ class ApplicationController < ActionController::Base
   end
 
   def setup_latest_products
-    @latest_products = Product.order("updated_at desc").limit(9)
+    @latest_products = Rails.cache.fetch [Product.latest.first, 'lasted-9'] do
+      Product.latest.limit(9)
+    end
   end
 
   def setup_slide_news
-    @slide_blogs = Blog.order('updated_at desc').limit(3)
+    @slide_blogs = Rails.cache.fetch [Blog.latest.first, 'lasted-3'] do
+      Blog.latest.limit(3)
+    end
   end
 end

@@ -32,5 +32,6 @@ module Kangyu
     config.active_record.raise_in_transactional_callbacks = true
 
     config.active_job.queue_adapter = :sidekiq
+    config.cache_store = :redis_store, {:url => 'redis://localhost:6379/0/cache', :compress => true, :compress_threshold => 32.kilobytes}
   end
 end

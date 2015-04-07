@@ -32,6 +32,7 @@ gem 'settingslogic'
 gem 'sidekiq'
 gem 'sinatra', :require => nil
 gem 'browser'
+gem 'redis-rails'
 
 # Use Puma as the app server
 gem 'puma'

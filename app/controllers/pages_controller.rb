@@ -8,8 +8,8 @@ class PagesController < ApplicationController
     respond_to do |format|
       format.html do |html|
         html.phone do
-          @first_blog = Blog.order('updated_at desc').first
-          @first_product = Product.order('updated_at desc').first
+          @first_blog = Blog.latest.first
+          @first_product = Product.latest.first
         end
       end
     end

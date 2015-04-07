@@ -10,4 +10,5 @@
 #
 
 class Blog < ActiveRecord::Base
+  scope :latest, -> { order("updated_at desc") }
 end
