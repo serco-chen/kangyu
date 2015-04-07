@@ -3,11 +3,10 @@
 
 - content_for :navbar_items do
   li
-    a href="#fullpage-product-details" data-menuanchor="fullpage-product-details" 产品介绍 | Product Introduction
+    = link_to "首页 | Home", root_path
   li
-    a href="#fullpage-portfolio" data-menuanchor="fullpage-portfolio" 最新产品 | Latest Products
-  li
-    a href="#fullpage-contact" data-menuanchor="fullpage-contact" 联系我们 | Contact Us
+    a href="#page-contact" 联系我们 | Contact Us
+
 
 = render 'product_details'
 = render 'shared/portfolio'

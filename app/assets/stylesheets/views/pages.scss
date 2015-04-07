@@ -41,8 +41,23 @@
     margin-top: 20px;
   }
 }
+
+.section .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.goto-list {
+  padding-bottom: 10px;
+  text-align: right;
+}
+body {
+  overflow: auto;
+}
+
 // pages controller
 body.pages-home {
+  overflow: hidden;
   .page-portfolio {
     background: #f7f7f7;
   }

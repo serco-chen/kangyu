@@ -1,12 +1,10 @@
 - content_for :navbar_items do
   li
-    a href="#fullpage-blog-details" data-menuanchor="fullpage-blog-details" 详细新闻 | News
+    = link_to "首页 | Home", root_path
   li
-    a href="#fullpage-news" data-menuanchor="fullpage-news" 更多新闻 | Other News
+    = link_to "更多新闻 | Other News", blogs_path
   li
-    a href="#fullpage-portfolio" data-menuanchor="fullpage-portfolio" 最新产品 | Latest Products
-  li
-    a href="#fullpage-contact" data-menuanchor="fullpage-contact" 联系我们 | Contact Us
+    a href="#page-contact" 联系我们 | Contact Us
 
 = render 'blog_details'
 = render 'shared/news'

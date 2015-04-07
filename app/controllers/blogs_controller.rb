@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
 
   layout "home"
-  before_action :setup_products, only: [:index, :show]
+  before_action :setup_latest_products, only: [:index, :show]
   before_action :setup_slide_news, only: [:show]
 
   def index

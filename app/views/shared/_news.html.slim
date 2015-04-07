@@ -18,7 +18,6 @@ section.section#page-news.page-news data-anchor='fullpage-news'
               p = content_summary(blog.body)
               = link_to blog_path(blog) do
                 span ... more
-    .row
-      .switch-articles.pull-right
-        = link_to "更多文章 ...", blogs_path
+    .goto-list
+      = link_to "更多文章 ...", blogs_path
 /! news ends
