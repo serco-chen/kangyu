@@ -1,14 +1,16 @@
 /! product-dtails begins
-section#page-product-details.page-product-details
-  .container
-    header.section-header
-      h2.section-title = @product.title
-      .spacer
-      p.section-subtitle
-    .row
-      .col-md-6
-        .profile
-          = image_tag @product.images.first.file.url(:large)
-      .col-md-6
-        = @product.description.presence || "没有描述"
+- cache ['product-details', @product] do
+  section.section#page-product-details.page-product-details data-anchor='fullpage-product-details'
+    .container
+      header.section-header
+        h2.section-title = @product.title
+        .spacer
+        p.section-subtitle
+      .row
+        .col-md-6.col-xs12
+          .profile
+            = image_tag @product.images.first.file.url(:large)
+        .col-md-6.col-xs12
+          .production-description
+            = @product.description.presence || "没有描述"
 /! product-dtails ends

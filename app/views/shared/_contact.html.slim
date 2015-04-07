@@ -1,5 +1,5 @@
 /! contact begins
-section#page-contact.page-contact
+section.section#page-contact.page-contact data-anchor='fullpage-contact'
   .container
     header.section-header
       h2.section-title
@@ -7,7 +7,7 @@ section#page-contact.page-contact
       .spacer
       p.section-subtitle
     .row
-      .col-sm-5.contact-info
+      .col-md-5.col-xs-12.contact-info
         h3 联系信息
         p
           i.fa.fa-map-marker
@@ -21,28 +21,28 @@ section#page-contact.page-contact
         p
           i.fa.fa-envelope-o
           |  9448228@qq.com
-      .col-sm-7
+      .col-md-7.hidden-xs
         h3 给我们写信
         /! Configure the contact form by adding your email address on mail/contact_me.php line 17
         = form_for Message.new, class: "form-horizontal" do |f|
           .control-group
             label.control-label for="name"  姓名
             .controls
-              = f.text_field :name, class: "form-control input-lg", placeholder: "您的姓名"
+              = f.text_field :name, class: "form-control", placeholder: "您的姓名"
           .control-group
             label.control-label for="email"  Email 地址
             .controls
-              = f.text_field :email, class: "form-control input-lg", placeholder: "您的 Email 地址"
+              = f.text_field :email, class: "form-control", placeholder: "您的 Email 地址"
           .control-group
             label.control-label for="phone_number"  电话号码
             .controls
-              = f.text_field :phone_number, class: "form-control input-lg", placeholder: "您的电话号码"
+              = f.text_field :phone_number, class: "form-control", placeholder: "您的电话号码"
           .control-group
             label.control-label for="content"  内容
             .controls
-              = f.text_area :content, class: "form-control input-lg", rows: "8", placeholder: "请输入内容"
+              = f.text_area :content, class: "form-control", rows: "3", placeholder: "请输入内容"
           .form-actions
-            = f.submit "提交", class: "btn btn-default btn-lg btn-block"
+            = f.submit "提交", class: "btn btn-default btn-block"
         /! End contact-form
     /! End row
 /! contact ends

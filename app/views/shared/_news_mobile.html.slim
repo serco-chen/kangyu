@@ -1,0 +1,23 @@
+/! news begins
+section.section#page-news.page-news data-anchor='fullpage-news'
+  .container
+    header.section-header
+      h2.section-title
+        span 新闻 | News
+      .spacer
+      p.section-subtitle
+    .row
+      - blog = @first_blog
+      .col-md-12.clearfix
+        article.blogs
+          header
+            h3 = link_to blog.title, blog_path(blog)
+            p
+              i.fa.fa-calendar
+              = format_time_for_blogs(blog.updated_at)
+            p = content_summary(blog.body)
+            = link_to blog_path(blog) do
+              span ... more
+    .goto-list
+      = link_to "更多文章 ...", blogs_path
+/! news ends

@@ -1,10 +1,8 @@
 - content_for :navbar_items do
   li
-    a href="#page-blog-list"  新闻 | News
+    = link_to "首页 | Home", root_path
   li
-    a href="#page-portfolio"  最新产品 | Latest Products
-  li
-    a href="#page-contact"  联系我们 | Contact Us
+    a href="#page-contact" 联系我们 | Contact Us
 
 = render 'blog_list'
 = render 'shared/portfolio'

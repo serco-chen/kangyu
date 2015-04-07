@@ -12,9 +12,12 @@
  *
  *= require_self
  *= require kangyu_bootstrap
- *= require magnific-popup
+ *= require jquery.fullPage
  *= require main
  *= require blue
  *= require_tree ./views
  */
 
+.section {
+  background: none;
+}

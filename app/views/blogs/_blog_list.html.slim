@@ -1,22 +1,23 @@
 /! blog-list begins
-section#page-blog-list.page-blog-list
+section.section#page-blog-list.page-blog-list data-anchor='fullpage-blog-list'
   .container
     header.section-header
       h2.section-title 新闻 | News
       .spacer
       p.section-subtitle
     - @blogs.each do |blog|
-      .row
-        .col-md-12.blog-item
-          h4
-            = link_to blog.title, blog_path(blog)
-          .blog-post-metadata
-            span.blog-post-date
-              i.fa.fa-calendar
-              = format_time_for_blogs(blog.updated_at)
-          .blog-post-content-summary
-            = content_summary(blog.body)
-            = link_to blog_path(blog) do
-              span ... more
+      - cache ['blog-list-item', blog] do
+        .row
+          .col-md-12.blog-item
+            h4
+              = link_to blog.title, blog_path(blog)
+            .blog-post-metadata
+              span.blog-post-date
+                i.fa.fa-calendar
+                = format_time_for_blogs(blog.updated_at)
+            .blog-post-content-summary
+              = content_summary(blog.body)
+              = link_to blog_path(blog) do
+                span ... more
     = paginate @blogs
 /! blog-list ends

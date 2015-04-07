@@ -1,10 +1,10 @@
 - content_for :navbar_items do
   li
-    a href="#page-blog-details"  详细新闻 | News
+    = link_to "首页 | Home", root_path
   li
-    a href="#page-news"  更多新闻 | Other News
+    = link_to "更多新闻 | Other News", blogs_path
   li
-    a href="#page-contact"  联系我们 | Contact Us
+    a href="#page-contact" 联系我们 | Contact Us
 
 = render 'blog_details'
 = render 'shared/news'

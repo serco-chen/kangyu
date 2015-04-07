@@ -1,0 +1,15 @@
+.row
+  header.section-header
+    h2.section-title
+      span 最新产品 | Latest Products
+    .spacer
+    p.section-subtitle
+  - products.each do |product|
+    .col-md-4.col-xs-12.clearfix
+      - cache ['product-inner-item', product] do
+        .mix class=product.product_type
+          = link_to product_url(product) do
+            = image_tag product.images.first.file.url(:thumb)
+            h5.product-title = product.title
+.goto-list
+  = link_to "更多产品 ...", products_path

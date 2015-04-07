@@ -15,4 +15,6 @@ class Product < ActiveRecord::Base
 
   has_many :images, as: :image_owner
   accepts_nested_attributes_for :images, allow_destroy: true
+
+  scope :latest, -> { order("updated_at desc") }
 end

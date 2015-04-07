@@ -1,25 +1,13 @@
 /! portfolio begins
-section#page-portfolio.page-portfolio
-  .container
-    .row
-      header.section-header
-        h2.section-title
-          span 最新产品 | Latest Products
-        .spacer
-        p.section-subtitle
-      #grid-controls-wrapper
-        ul.nav.nav-pills.center-pills.grid-controls
-          li.active.filter
-            a data-filter="*" href="javascript:void(0)"  全部 ALL
-          li.filter
-            a data-filter=".charge" href="javascript:void(0)" 充电型 CHARGE
-          li.filter
-            a data-filter=".battery" href="javascript:void(0)"  干电池型 BATTERY
-      div.grid-outsider
-        ul.grid.grid-wrapper
-          - @products.each do |product|
-            li.mix class=(product.charge? ? "charge" : "battery")
-              = link_to product_url(product) do
-                = image_tag product.images.first.file.url(:thumb)
-                h5.product-title = product.title
+section.section#page-portfolio.page-portfolio data-anchor='fullpage-portfolio'
+  - if controller_name == 'pages' and action_name == 'home'
+    - @latest_products.each_slice(3) do |products|
+      .slide
+        .container
+          = render partial: 'shared/product_inner', locals: {products: products}
+  - else
+    .container
+      = render partial: 'shared/product_inner', locals: {products: @latest_products.first(3)}
+
 /! portfolio ends
+
