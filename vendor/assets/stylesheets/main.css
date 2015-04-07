@@ -460,6 +460,32 @@ label.valid {
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);
 }
+.btn-qq:hover {
+    color: #2E8ACD;
+}
+.btn-email:hover {
+    color: #BAB1A8;
+}
+.btn-taobao, .btn-wangwang {
+    position: relative;
+}
+.btn-taobao .taobao-normal {
+    display: block;
+}
+.btn-taobao .taobao-active {
+    display: none;
+}
+.btn-taobao:hover .taobao-normal {
+    display: none;
+}
+.btn-taobao:hover .taobao-active {
+    display: block;
+}
+.btn-taobao img {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
 .btn-twitter:hover {
     color: #2BA9E0;
 }
