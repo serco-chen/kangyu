@@ -16,5 +16,6 @@
 
 //= require jquery.fullPage
 //= require jquery.vegas.min
+//= require jquery.isotope.min
 //= require main
 //= require modernizr-2.6.2.min

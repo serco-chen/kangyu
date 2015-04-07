@@ -1,13 +1,13 @@
 /! portfolio begins
 section.section#page-portfolio.page-portfolio data-anchor='fullpage-portfolio'
   - if controller_name == 'pages' and action_name == 'home'
-    - @products.each_slice(3) do |products|
+    - @latest_products.each_slice(3) do |products|
       .slide
         .container
           = render partial: 'shared/product_inner', locals: {products: products}
   - else
     .container
-      = render partial: 'shared/product_inner', locals: {products: @products.first(3)}
+      = render partial: 'shared/product_inner', locals: {products: @latest_products.first(3)}
 
 /! portfolio ends
 

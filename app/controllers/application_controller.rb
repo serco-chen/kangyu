@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def setup_latest_products
-    @products = Product.order("updated_at desc").limit(9)
+    @latest_products = Product.order("updated_at desc").limit(9)
   end
 
   def setup_slide_news

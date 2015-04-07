@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var root_page = $('body').hasClass('pages-home')
+    var products_index_page = $('body').hasClass('products-index')
 
     $('#new_message').on('submit', function(e){
         var self = this;
@@ -59,6 +60,37 @@ $(document).ready(function() {
             keyboardScrolling: true,
             animateAnchor: true,
             recordHistory: true,
+        });
+    };
+
+    /* isotope */
+    if (products_index_page) {
+        $(window).load(function() {
+            var $container = $('.grid-wrapper');
+
+            $container.isotope({
+                filter: '*',
+                itemSelector: '.mix',
+                masonry: {
+                    isFitWidth: true,
+                },
+            });
+
+            $('.grid-controls li a').click(function() {
+                $('.grid-controls .current').removeClass('current');
+                $(this).addClass('current');
+
+                var selector = $(this).attr('data-filter');
+                $container.isotope({
+                    filter: selector,
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'linear',
+                        queue: false
+                    }
+                });
+                return false;
+            });
         });
     };
 

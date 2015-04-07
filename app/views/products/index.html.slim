@@ -1,15 +1,12 @@
 - content_for :head_title do
-  title = "#{@product.title}-宁波市北仑康煜电器科技有限公司"
+  title = "产品展示-宁波市北仑康煜电器科技有限公司"
 
 - content_for :navbar_items do
   li
     = link_to "首页 | Home", root_path
   li
-    = link_to "产品展示 | Products", products_path
-  li
     a href="#page-contact" 联系我们 | Contact Us
 
 
-= render 'product_details'
-= render 'shared/portfolio'
+= render 'product_list'
 = render 'shared/contact'
