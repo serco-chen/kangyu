@@ -11,4 +11,6 @@
 
 class Blog < ActiveRecord::Base
   paginates_per 10
+
+  scope :latest, -> {order("updated_at desc")}
 end

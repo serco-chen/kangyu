@@ -3,9 +3,9 @@
 
 - content_for :navbar_items do
   li
-    a href="#page-product-details"  产品介绍 | Product Introduction
+    = link_to "首页 | Home", root_path
   li
-    a href="#page-portfolio"  最新产品 | Latest Products
+    = link_to "产品展示 | Products", products_path
   li
     a href="#page-contact"  联系我们 | Contact Us
 

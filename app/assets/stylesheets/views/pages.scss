@@ -24,6 +24,10 @@
     text-decoration: none;
   }
 }
+.goto-list {
+  padding-bottom: 10px;
+  text-align: right;
+}
 // pages controller
 body.pages-home {
   .page-portfolio {
@@ -33,7 +37,6 @@ body.pages-home {
     background: #fff;
   }
   .page-profile {
-    min-height: 100%;
   }
 }
 
@@ -61,6 +64,9 @@ body.products-show {
     min-height: 100%;
     padding-top: 30px;
     background: #fff;
+    .container {
+      padding-bottom: 50px;
+    }
   }
   .page-portfolio {
     background: #f7f7f7;

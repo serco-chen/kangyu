@@ -1,16 +1,17 @@
 /! profile begins
-section#page-blog-details.page-blog-details
-  .container
-    header.section-header
-      h2.section-title = @blog.title
-      .spacer
-      p.section-subtitle
-    .row
-      .col-md-12
-        .blog-post-metadata
-          span.blog-post-date
-            i.fa.fa-calendar
-            = format_time_for_blogs(@blog.updated_at)
-        .blog-post-content
-          = @blog.body
+- cache ['blog-detail', @blog] do
+  section#page-blog-details.page-blog-details
+    .container
+      header.section-header
+        h2.section-title = @blog.title
+        .spacer
+        p.section-subtitle
+      .row
+        .col-md-12
+          .blog-post-metadata
+            span.blog-post-date
+              i.fa.fa-calendar
+              = format_time_for_blogs(@blog.updated_at)
+          .blog-post-content
+            = @blog.body
 /! profile ends

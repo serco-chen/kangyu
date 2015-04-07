@@ -13,11 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-
+//= require modernizr-2.6.2.min
 //= require jquery.scrollTo
 //= require jquery.nav
 //= require jquery.sticky
 //= require jquery.vegas.min
 //= require jquery.isotope.min
 //= require main
-//= require modernizr-2.6.2.min

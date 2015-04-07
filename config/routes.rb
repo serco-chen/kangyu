@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#home'
 
-  resources :products, only: [:show]
+  resources :products, only: [:index, :show]
   resources :blogs, only: [:index, :show]
   resources :messages, only: [:create]
 

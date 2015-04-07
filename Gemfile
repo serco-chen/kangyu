@@ -31,6 +31,7 @@ gem 'kaminari'
 gem 'settingslogic'
 gem 'sidekiq'
 gem 'sinatra', :require => nil
+gem 'redis-rails'
 
 # Use Puma as the app server
 gem 'puma'

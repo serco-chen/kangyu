@@ -1,0 +1,14 @@
+- content_for :head_title do
+  title = "产品展示-宁波市北仑康煜电器科技有限公司"
+
+- content_for :navbar_items do
+  li
+    = link_to "首页 | Home", root_path
+  li
+    = link_to "新闻 | News", blogs_path
+  li
+    a href="#page-contact" 联系我们 | Contact Us
+
+
+= render 'shared/portfolio'
+= render 'shared/contact'

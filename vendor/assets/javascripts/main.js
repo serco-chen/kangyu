@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var root_page = $('body').hasClass('pages-home');
 
     $('#new_message').on('submit', function(e){
         var self = this;
@@ -41,15 +42,6 @@ $(document).ready(function() {
 
     $(window).load(function() {
         var $container = $('.grid-wrapper');
-        // $container.isotope({
-        //     filter: '*',
-        //     animationOptions: {
-        //         duration: 750,
-        //         easing: 'linear',
-        //         queue: false
-        //     }
-        // });
-
         $container.isotope({
             filter: '*',
             itemSelector: '.mix',
@@ -93,32 +85,33 @@ $(document).ready(function() {
 
     /* VEGAS Home Slider */
 
-    $.vegas('slideshow', {
-        backgrounds: [
+    if (root_page) {
+        $.vegas('slideshow', {
+            backgrounds: [
 
-            {
-                src: '/img/slider/01.jpg',
-                fade: 1000
-            }, {
-                src: '/img/slider/02.jpg',
-                fade: 1000
-            }, {
-                src: '/img/slider/03.jpg',
-                fade: 1000
-            }, {
-                src: '/img/slider/04.jpg',
-                fade: 1000
-            }
-        ]
-    })('overlay', {
-        src: '/img/overlays/16.png'
-    });
-    $("#vegas-next").click(function() {
-        $.vegas('next');
-    });
-    $("#vegas-prev").click(function() {
-        $.vegas('previous');
-    });
-
+                {
+                    src: '/img/slider/01.jpg',
+                    fade: 1000
+                }, {
+                    src: '/img/slider/02.jpg',
+                    fade: 1000
+                }, {
+                    src: '/img/slider/03.jpg',
+                    fade: 1000
+                }, {
+                    src: '/img/slider/04.jpg',
+                    fade: 1000
+                }
+            ]
+        })('overlay', {
+            src: '/img/overlays/16.png'
+        });
+        $("#vegas-next").click(function() {
+            $.vegas('next');
+        });
+        $("#vegas-prev").click(function() {
+            $.vegas('previous');
+        });
+    }
 
 });

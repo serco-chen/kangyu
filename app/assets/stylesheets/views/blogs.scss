@@ -3,9 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .page-blog-list {
-  .container {
-    padding-bottom: 60px;
-  }
   .blog-item {
     padding: 20px 30px;
     .blog-post-metadata {
@@ -21,6 +18,7 @@
 }
 
 .page-blog-details {
+  padding-bottom: 30px;
   .blog-post-metadata {
     margin-bottom: 20px;
   }

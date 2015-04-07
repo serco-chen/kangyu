@@ -506,6 +506,7 @@ label.valid {
 @media(max-width:992px) {
     .page-profile .profile {
         margin: 0 auto 20px auto;
+        float: none;
     }
     .grid {
         width: 580px;
@@ -513,6 +514,23 @@ label.valid {
     }
 }
 @media (max-width: 479px) {
+    h3 {
+        font-size: 16px;
+    }
+    .page-blog-details .blog-post-content {
+        font-size: 13px!important;
+        line-height: 1.8!important;
+    }
+    .page-product-details .production-description{
+        margin-top: 15px;
+        font-size: 14px;
+    }
+/*     .page-portfolio .mix {
+         text-align: center;
+     }*/
+    .page-contact .contact-info p {
+        font-size: 13px;
+    }
     .page-welcome header h1 {
         font-size: 2em;
     }
@@ -531,5 +549,7 @@ label.valid {
     }
     .page-profile .profile {
         margin: 0 auto 20px auto;
+        float: none;
     }
+
 }
