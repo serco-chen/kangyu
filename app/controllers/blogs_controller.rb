@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
   before_action :setup_slide_news, only: [:show]
 
   def index
-    @blogs = Blog.latest.page(params[:page]).per(2)
+    @blogs = Blog.latest.page(params[:page]).per(5)
   end
 
   def show
