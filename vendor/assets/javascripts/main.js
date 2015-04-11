@@ -92,16 +92,16 @@ $(document).ready(function() {
             backgrounds: [
 
                 {
-                    src: '/img/slider/01.jpg',
-                    fade: 1000
-                }, {
-                    src: '/img/slider/02.jpg',
-                    fade: 1000
-                }, {
-                    src: '/img/slider/03.jpg',
-                    fade: 1000
-                }, {
-                    src: '/img/slider/04.jpg',
+                //     src: '/img/slider/01.jpg',
+                //     fade: 1000
+                // }, {
+                //     src: '/img/slider/02.jpg',
+                //     fade: 1000
+                // }, {
+                //     src: '/img/slider/03.jpg',
+                //     fade: 1000
+                // }, {
+                    src: '/img/slider/11.jpg',
                     fade: 1000
                 }
             ]
