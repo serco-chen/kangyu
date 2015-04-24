@@ -4,10 +4,10 @@
 ---
 :verbose: true
 :pidfile: ./tmp/pids/sidekiq.pid
-:concurrency:  10
+:concurrency:  2
 :queues:
-  - [default, 5]
-  - [mailers, 5]
+  - [default, 1]
+  - [mailers, 1]
 
 production:
   :pidfile: /var/www/kangyu/shared/tmp/pids/sidekiq.pid
